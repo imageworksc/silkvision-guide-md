@@ -7,7 +7,7 @@ colours, fonts, components, copy rules and contact details.
 
 ## 📥 Install — 5 minutes, no coding needed
 
-### 👉 **[Tutorial en español](docs/INSTALAR.md)** · **[Tutorial in English](docs/INSTALL.md)**
+### 👉 **[Step-by-step tutorial](docs/INSTALL.md)**
 
 **Quick version**
 
@@ -42,7 +42,7 @@ templates/content-brief.md   fill-in form for a new page's content
 assets/starter/              working page shell: CSS, JS, fonts, logos, favicons
 scripts/new-page.sh          copies the starter into a new project folder
 scripts/build-zip.sh         rebuilds silkvision-design.zip
-docs/                        install tutorials (ES / EN)
+docs/INSTALL.md              install & usage tutorial
 ```
 
 ## For maintainers
