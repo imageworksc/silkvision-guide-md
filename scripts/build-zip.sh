@@ -8,7 +8,7 @@ stage="$(mktemp -d)"
 trap 'rm -rf "$stage"' EXIT
 
 mkdir "$stage/silkvision-design"
-cp -R "$here/SKILL.md" "$here/README.md" "$here/references" "$here/assets" "$here/scripts" \
+cp -R "$here/SKILL.md" "$here/README.md" "$here/references" "$here/templates" "$here/assets" "$here/scripts" \
       "$stage/silkvision-design/"
 
 rm -f "$here/silkvision-design.zip"

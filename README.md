@@ -1,15 +1,32 @@
-# Silk Vision design skill
+# Silk Vision design skill for Claude
 
-A Claude skill that holds the design and build guide for every Silk Vision &
-Surgical Center web page, extracted from the shipped
-[Ziplyft™ page](https://imageworksc.github.io/silkvision-ziplyft/)
-([source](https://github.com/imageworksc/silkvision-ziplyft)) and the
-[office-based surgery page](https://github.com/imageworksc/silkvision-seal-of-approval)'s
-`DESIGN.md`.
+Install this skill once, and Claude will build and review any Silk Vision &
+Surgical Center page in the house style. The reference is the
+[Ziplyft™ page](https://imageworksc.github.io/silkvision-ziplyft/): same
+colours, fonts, components, copy rules and contact details.
 
-With it installed, ask Claude for things like *"Build the Silk Vision LASIK
-page"* or *"Review this Silk Vision page against the design system"*, and it
-will follow the tokens, components, copy rules and QA checklist here.
+## 📥 Install — 5 minutes, no coding needed
+
+### 👉 **[Tutorial en español](docs/INSTALAR.md)** · **[Tutorial in English](docs/INSTALL.md)**
+
+**Quick version**
+
+| Where you use Claude | What to do |
+| --- | --- |
+| **claude.ai / desktop app** | 1. Download **[silkvision-design.zip](https://github.com/imageworksc/silkvision-guide-md/raw/main/silkvision-design.zip)** (don't unzip it) · 2. Settings → Capabilities → turn on *Code execution and file creation* · 3. Skills → **Upload skill** → choose the zip |
+| **Claude Code** | `git clone https://github.com/imageworksc/silkvision-guide-md.git ~/.claude/skills/silkvision-design` and start a new session |
+
+## ✍️ Make a new page
+
+1. Fill in the **[content brief](templates/content-brief.md)**, or just have
+   your copy or the old page's link ready.
+2. Tell Claude: *"Build the Silk Vision [procedure] page with the
+   silkvision-design skill. Here's the content: …"*
+3. Check the section outline Claude proposes, then open the `index.html` it
+   gives you.
+
+Claude never invents prices, results or facts. Anything missing shows up
+as a visible placeholder.
 
 ## What's inside
 
@@ -21,58 +38,24 @@ references/
   page-blueprint.md          head, schema, shared shell, section order, links, deploy
   content-voice.md           voice, headings, medical language, CTAs
   qa-checklist.md            motion contract, accessibility floors, responsive sweep
-assets/starter/              a working page shell: CSS, JS, fonts, logos, favicons
+templates/content-brief.md   fill-in form for a new page's content
+assets/starter/              working page shell: CSS, JS, fonts, logos, favicons
 scripts/new-page.sh          copies the starter into a new project folder
+scripts/build-zip.sh         rebuilds silkvision-design.zip
+docs/                        install tutorials (ES / EN)
 ```
 
-## Install
+## For maintainers
 
-### Claude Code (CLI, desktop, VS Code)
+The Ziplyft page
+([source](https://github.com/imageworksc/silkvision-ziplyft)) is the
+reference, along with the office-based surgery page's
+[`DESIGN.md`](https://github.com/imageworksc/silkvision-seal-of-approval).
+When a newer page settles a new decision:
 
-Personal (all your projects):
+1. Update `SKILL.md` and `references/`.
+2. Copy any shared CSS or JS changes into `assets/starter/`.
+3. Run `./scripts/build-zip.sh` and commit the new zip. Claude.ai users
+   download it from here, so it has to stay current.
 
-```bash
-git clone https://github.com/imageworksc/silkvision-guide-md.git ~/.claude/skills/silkvision-design
-```
-
-One project only (shared with the team through that repo):
-
-```bash
-git clone https://github.com/imageworksc/silkvision-guide-md.git .claude/skills/silkvision-design
-```
-
-Restart Claude Code (or start a new session). Check with `/skills` — it
-appears as **silkvision-design**. Update later with `git pull` in that folder.
-
-### Claude.ai / Claude desktop app
-
-1. Download
-   [**`silkvision-design.zip`**](https://github.com/imageworksc/silkvision-guide-md/raw/main/silkvision-design.zip)
-   from the root of this repo.
-2. In Claude: **Settings → Capabilities → Skills → Upload skill**, and pick
-   the zip.
-3. Make sure the skill is toggled on.
-
-To rebuild the zip after editing the skill:
-
-```bash
-./scripts/build-zip.sh
-```
-
-## Starting a new page by hand
-
-```bash
-~/.claude/skills/silkvision-design/scripts/new-page.sh ~/code/silkvision-lasik
-```
-
-Then replace every `{{PLACEHOLDER}}` in `index.html` and the two
-`HERO_IMAGE` URLs in `css/sections.css`.
-
-## Updating the guide
-
-The Ziplyft page is the reference. When a newer Silk Vision page settles a
-new decision, update `SKILL.md` / `references/` and copy any shared CSS or JS
-changes into `assets/starter/`, then rebuild the zip.
-
-Fonts: Poppins and Inter, SIL Open Font License (licences in
-`assets/starter/fonts/`).
+Fonts: Poppins and Inter, SIL Open Font License (`assets/starter/fonts/`).

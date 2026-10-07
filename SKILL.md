@@ -38,6 +38,33 @@ the newest build.
    comment.
 4. **Finish with the QA checklist.** A page is not done because it renders.
 
+## Building a page from new content
+
+The person asking may not be a developer. Make it easy for them:
+
+1. **Collect the content.** Accept whatever they give you: a filled
+   `templates/content-brief.md`, a pasted doc, a link to the old page, or
+   a few notes. If they have nothing yet, offer them the brief template.
+2. **Map it to sections.** Put each piece of content into the section
+   pattern that matches its shape (see the table in page-blueprint.md).
+   Before you build, show a short outline: section → pattern → ground.
+3. **Ask only about what blocks you.** Missing facts become visible
+   placeholders. Only ask about things you can't leave out: the procedure
+   name, the hero image, or a claim you're unsure is approved.
+4. **Build** from `assets/starter/`. Keep the shared shell untouched, and
+   copy components only from `references/components.md`.
+5. **Run the QA checklist**, then deliver:
+   - Developers get a project folder (`index.html`, `css/`, `js/`,
+     `fonts/`, `images/`) plus a README with "Pending from the practice".
+   - Everyone else gets the same folder and plain steps to preview it:
+     open `index.html` in a browser. To publish, push it to an
+     `imageworksc/silkvision-<page>` repo with GitHub Pages turned on.
+6. **Editing an existing Silk Vision page:** read its files first, keep
+   what already follows this guide, and fix what doesn't.
+
+Write all page copy in US English, even when the request comes in another
+language. Talk to the person in their own language.
+
 ## The non-negotiable rules
 
 These are settled decisions. Do not "improve" them without the client's
