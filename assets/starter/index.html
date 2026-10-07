@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- STARTER — Silk Vision page shell, from the Ziplyft build.
+     Replace every {{PLACEHOLDER}}. Keep the shell (icon sheet, header,
+     footer, sticky bar) exactly as it is: every Silk Vision page shares it. -->
+
+<title>{{PROCEDURE}} in Northern Virginia | Silk Vision &amp; Surgical Center</title>
+<meta name="description" content="{{ONE-SENTENCE DESCRIPTION, 140–160 characters, naming the procedure, Silk Vision, Annandale and Manassas.}}">
+<meta name="theme-color" content="#001325">
+
+<!-- Staging only. Remove when this becomes the live page. -->
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Silk Vision &amp; Surgical Center">
+<meta property="og:title" content="{{PROCEDURE}} in Northern Virginia">
+<meta property="og:description" content="{{SHORT PROMISE}}">
+<meta property="og:image" content="https://res.cloudinary.com/dsjbq35es/image/upload/c_fill,w_1200,h_630,g_auto,f_jpg,q_auto/{{HERO_PUBLIC_ID}}.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://www.silkvision.net/#organization",
+      "name": "Silk Vision & Surgical Center",
+      "url": "https://www.silkvision.net/",
+      "telephone": "+1-703-876-9700",
+      "address": [
+        { "@type": "PostalAddress", "streetAddress": "3301 Woodburn Rd, Suite 308", "addressLocality": "Annandale", "addressRegion": "VA", "postalCode": "22003", "addressCountry": "US" },
+        { "@type": "PostalAddress", "streetAddress": "8405 Dorsey Circle, Suite 101", "addressLocality": "Manassas", "addressRegion": "VA", "postalCode": "20110", "addressCountry": "US" }
+      ]
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "{{PROCEDURE}}",
+      "bodyLocation": "{{BODY LOCATION}}",
+      "howPerformed": "{{ONE SENTENCE}}"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "{{QUESTION 1 — word for word as on the page}}", "acceptedAnswer": { "@type": "Answer", "text": "{{ANSWER 1 — word for word as on the page}}" } }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+<link rel="preconnect" href="https://res.cloudinary.com">
+<link rel="preload" as="image" fetchpriority="high"
+      href="https://res.cloudinary.com/dsjbq35es/image/upload/f_auto,q_auto,w_1800/{{HERO_PUBLIC_ID}}.jpg">
+<!-- Order matters: motion.css last so it can switch everything off.
+     Bump ?v= on every deploy that touches CSS or JS. -->
+<link rel="stylesheet" href="css/fonts.css?v=1">
+<link rel="stylesheet" href="css/tokens.css?v=1">
+<link rel="stylesheet" href="css/base.css?v=1">
+<link rel="stylesheet" href="css/components.css?v=1">
+<link rel="stylesheet" href="css/sections.css?v=1">
+<link rel="stylesheet" href="css/type.css?v=1">
+<link rel="stylesheet" href="css/motion.css?v=1">
+
+<script src="js/main.js?v=1" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ==========================================================================
+     ICON SHEET — 24×24, 1.8 stroke, round caps, currentColor.
+     Icons that show an eye carry the set's signature: two concentric
+     circles, r 3.4 and r 1. Draw new ones on the same grid; never pull
+     from an icon library.
+     ========================================================================== -->
+<svg class="icon-sheet" width="0" height="0" aria-hidden="true" focusable="false">
+<defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14M12.5 5.5L19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.8 12.6l4.6 4.6L19.4 7"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6.5 9.5L12 15l5.5-5.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.8 3.4h3.1l1.5 3.9-2 1.4a12.3 12.3 0 006 6l1.4-2 3.9 1.5v3.1a2 2 0 01-2.2 2A17.6 17.6 0 013.3 5.6a2 2 0 012-2.2z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5.5v13M15 5.5v13"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7.5 4.8v14.4L19 12z"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.6 12S6.6 5.8 12 5.8 21.4 12 21.4 12 17.4 18.2 12 18.2 2.6 12 2.6 12z"/><circle cx="12" cy="12" r="3.4"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-drops" viewBox="0 0 24 24"><path d="M12 2.8c1.8 2.3 2.7 3.7 2.7 4.8a2.7 2.7 0 11-5.4 0c0-1.1.9-2.5 2.7-4.8z"/><path d="M3.4 16.6S7 12.4 12 12.4s8.6 4.2 8.6 4.2-3.6 4.2-8.6 4.2-8.6-4.2-8.6-4.2z"/><circle cx="12" cy="16.6" r="2.2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4.2 11.2L12 4.4l7.8 6.8v8.4a1.4 1.4 0 01-1.4 1.4H5.6a1.4 1.4 0 01-1.4-1.4z"/><path d="M9.6 21.1V15h4.8v6.1"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.6" y="5" width="16.8" height="15.6" rx="2.4"/><path d="M3.6 10.2h16.8M8 3v4M16 3v4"/><rect x="10.6" y="13" width="2.8" height="2.8" rx=".7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.2l7.3 2.9v5.6c0 4.4-3.1 8.2-7.3 9.3-4.2-1.1-7.3-4.9-7.3-9.3V6.1z"/><path d="M9 12.2l2.2 2.2 4-4.1"/></symbol>
+  <symbol id="i-office" viewBox="0 0 24 24"><path d="M5.2 20.6V6.6L12 3.2l6.8 3.4v14"/><path d="M2.8 20.6h18.4"/><path d="M9.3 10.2h1.2M13.5 10.2h1.2M9.3 13.8h1.2M13.5 13.8h1.2"/><path d="M10.4 20.6v-3.4h3.2v3.4"/></symbol>
+  <symbol id="i-time" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 6.8V12l3.4 2"/></symbol>
+  <!-- Draw this page's own symbols here. -->
+</defs>
+</svg>
+
+<!-- ===== HEADER — shared by every Silk Vision page; do not edit per page == -->
+<div class="topbar">
+  <div class="wrap cluster cluster--between">
+    <div class="cluster">
+      <a href="https://www.mypatientvisit.com/#/login?practiceID=FCPGUL" target="_blank" rel="noopener">Pay Bill Online</a>
+      <a href="https://www.silkvision.net/special-offers">Special Offers</a>
+    </div>
+    <a href="tel:+17038769700"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call or Text: (703)&nbsp;876-9700</a>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <a class="brand" href="https://www.silkvision.net/">
+      <img src="images/logo.png" width="200" height="50" alt="Silk Vision &amp; Surgical Center — home">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+      <svg class="ico ico--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="ico ico--close" aria-hidden="true"><use href="#i-close"/></svg>
+      <span class="nav-toggle__shut">Menu</span>
+      <span class="nav-toggle__open">Close</span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="https://www.silkvision.net/silk-vision-lasik-eye-surgery-center">Vision Correction</a>
+      <a href="https://www.silkvision.net/cataract-surgery-and-cataract-removal">Eye Care</a>
+      <a href="https://www.silkvision.net/trusted-eye-physicians-and-surgeons-northern-virginia">About</a>
+      <a href="https://www.silkvision.net/registration-consent-forms">Patients</a>
+      <a class="btn btn--solid" href="https://www.mypatientvisit.com/onlinescheduling/#/scheduler/schedule?practiceid=b46123f5-99ee-4f66-969c-fe650949c344">Book a consultation
+        <svg class="ico ico--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO — photograph under one flat navy scrim, copy on top ====== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap stack stack--loose">
+      <div class="stack">
+        <h1 id="hero-title" data-seq="0">{{PROCEDURE}} in Northern Virginia</h1>
+        <p class="lead" data-seq="1">{{ONE-LINE PROMISE}}</p>
+      </div>
+
+      <p class="hero-intro" data-seq="2">{{TWO OR THREE SENTENCES: what it is, how it is done, why it is simpler.}}</p>
+
+      <div class="cluster" data-seq="3">
+        <a class="btn btn--solid btn--lg" href="https://www.mypatientvisit.com/onlinescheduling/#/scheduler/schedule?practiceid=b46123f5-99ee-4f66-969c-fe650949c344">Schedule a consultation
+          <svg class="ico ico--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost btn--lg" href="tel:+17038769700">
+          <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>(703)&nbsp;876-9700</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IS IT — facts bar, then copy beside one object ============ -->
+  <section class="band band--open" aria-labelledby="what-title">
+    <div class="wrap stack stack--loose">
+      <div class="facts-bar full" data-reveal>
+        <dl class="hero-facts">
+          <div><dt>{{LABEL}}</dt><dd>{{VALUE}}</dd></div>
+          <div><dt>{{LABEL}}</dt><dd>{{VALUE}}</dd></div>
+          <div><dt>{{LABEL}}</dt><dd>{{VALUE}}</dd></div>
+        </dl>
+        <p class="facts-bar__area">Available through Silk Vision for patients in Annandale,
+          Manassas and throughout Northern Virginia and the Washington, DC area.</p>
+      </div>
+
+      <div class="split split--middle full">
+        <div class="stack" data-reveal>
+          <div class="stack head">
+            <h2 id="what-title">What is {{PROCEDURE}}?</h2>
+          </div>
+          <div class="prose">
+            <p class="first">{{LEAD SENTENCE with <strong class="hl">the one claim</strong> it exists to make.}}</p>
+            <p>{{SUPPORTING PARAGRAPH}}</p>
+          </div>
+        </div>
+        <figure class="frame frame--photo" data-reveal>
+          <img src="https://res.cloudinary.com/dsjbq35es/image/upload/f_auto,q_auto,w_1100/{{PUBLIC_ID}}.jpg"
+               width="1100" height="825" loading="lazy" alt="{{WHAT THE PHOTO SHOWS}}">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Add the page's sections here, from references/components.md.
+       Alternate grounds: white → paper/tint → deep → white …
+       Never two of the same ground in a row. ============================== -->
+
+  <!-- ===== FAQ ============================================================= -->
+  <section class="band" aria-labelledby="faq-title">
+    <div class="wrap split faq-split">
+      <div class="stack faq-head" data-reveal>
+        <h2 id="faq-title">{{PROCEDURE}} frequently asked questions</h2>
+        <p class="lead">Can’t find your question here? Our team is happy to answer it.</p>
+        <a class="btn btn--ghost" href="tel:+17038769700">Call (703)&nbsp;876-9700
+          <svg class="ico ico--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="faq" data-reveal>
+        <details name="faq">
+          <summary>{{QUESTION 1}}<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <p>{{ANSWER 1}}</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING CALL — slim: question, one line, two buttons =========== -->
+  <section class="band band--deep band--slim closing" id="contact" aria-labelledby="next-title">
+    <div class="wrap stack stack--loose stack--center" data-reveal>
+      <h2 id="next-title">Ready to see if {{PROCEDURE}} is right for you?</h2>
+      <p class="lead">{{ONE OR TWO SENTENCES ending on <strong class="hl">Let Dr.&nbsp;Silk take a look.</strong>}}</p>
+      <div class="cluster">
+        <a class="btn btn--solid btn--lg" href="https://www.mypatientvisit.com/onlinescheduling/#/scheduler/schedule?practiceid=b46123f5-99ee-4f66-969c-fe650949c344"><span class="lbl-full">Schedule your {{PROCEDURE}} consultation</span><span class="lbl-short">Schedule a consultation</span>
+          <svg class="ico ico--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost btn--lg" href="tel:+17038769700">
+          <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Or call (703)&nbsp;876-9700</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER — shared by every Silk Vision page; do not edit per page == -->
+<footer class="site-footer" aria-labelledby="footer-title">
+  <h2 class="sr-only" id="footer-title">Silk Vision &amp; Surgical Center</h2>
+
+  <div class="wrap footer-main">
+    <div class="footer-brand">
+      <img src="images/logo-white.png" width="200" height="50" alt="Silk Vision &amp; Surgical Center">
+    </div>
+
+    <div class="footer-offices">
+      <div class="office">
+        <h3>Annandale office</h3>
+        <p>3301 Woodburn Rd<br>Suite 308<br>Annandale, VA 22003</p>
+        <a href="https://maps.app.goo.gl/pcg77yQvGUgRG6GPA" target="_blank" rel="noopener"
+           aria-label="Review the Annandale office on Google">Review us on Google</a>
+      </div>
+      <div class="office">
+        <h3>Manassas office</h3>
+        <p>8405 Dorsey Circle<br>Suite 101<br>Manassas, VA 20110</p>
+        <a href="https://g.page/r/CWlAzNggLTwJEBA" target="_blank" rel="noopener"
+           aria-label="Review the Manassas office on Google">Review us on Google</a>
+      </div>
+      <div class="office">
+        <h3>LASIK center</h3>
+        <p>3301 Woodburn Rd<br>Suite 210<br>Annandale, VA 22003</p>
+      </div>
+      <div class="office">
+        <h3>Office hours</h3>
+        <p>Monday – Friday<br>8:30am – 4:30pm</p>
+        <a class="footer-phone" href="tel:+17038769700">
+          <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>(703)&nbsp;876-9700
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <div class="wrap">
+      <p class="footer-disclaimer">The material contained on this site is for informational
+        purposes only and is not intended to be a substitute for professional medical advice,
+        diagnosis or treatment. Individual results and recovery times vary. Always seek the advice
+        of your physician or other qualified healthcare provider.</p>
+      <div class="footer-meta">
+        <p>Copyright © 2026 Silk Vision &amp; Surgical Center. All rights reserved.</p>
+        <p><a href="https://www.silkvision.net/sitemap">Sitemap</a></p>
+        <p><a href="https://www.imageworkscreative.com" target="_blank" rel="noopener">Web design by ImageWorks Creative</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Phones only: the hero's two actions, once it has scrolled away. -->
+<div class="sticky-cta" id="stickyCta" data-shown="false">
+  <a class="sticky-cta__book" href="https://www.mypatientvisit.com/onlinescheduling/#/scheduler/schedule?practiceid=b46123f5-99ee-4f66-969c-fe650949c344">Book consultation</a>
+  <a class="sticky-cta__call" href="tel:+17038769700"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call now</a>
+</div>
+
+</body>
+</html>
